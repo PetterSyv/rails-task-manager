@@ -1,7 +1,9 @@
 <h1>This is the index page!</h1>
 
 <ul>
+
   <% @tasks.each do |task| %>
-    <li><%= task.title%> - completed: <%= task.completed%></li>
+    <li> <%= link_to task.title, task_path(task) %> - completed: <%= task.completed%>  </li> 
   <% end %>
+
 </ul>
